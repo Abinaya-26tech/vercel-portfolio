@@ -1,37 +1,46 @@
 /* Reset some default styles */
 body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Center text within a column */
-  .text-center {
-    text-align: center;
-  }
-  
-  /* Style for columns */
+  margin: 0;
+  padding: 0;
+}
+
+/* Center text within a column */
+.text-center {
+  text-align: center;
+}
+
+/* Style for columns */
+.column {
+  float: left;
+  width: 100%; /* Set the width of each column to 100% by default */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Additional styling for the About section */
+.about {
+  background-color: #f2f2f2;
+}
+
+/* Additional styling for the Project section */
+.project {
+  background-color: #e6f7ff;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  /* On medium-sized screens and larger, adjust column width */
   .column {
-    float: left; /* Float the columns to the left */
-    width: 50%;   /* Set the width of each column to 50% of the container */
-    box-sizing: border-box; /* Include padding and border in the width */
-    border: 1px solid #ccc; /* Add a 1px solid border around each column */
-    padding: 15px; /* Optional: Add some padding inside each column */
+    width: 50%;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;  /* Clear the floats after the columns to prevent layout issues */
-  }
-  
-  /* Additional styling for the About section */
-  .about {
-    background-color: #f2f2f2; /* Add a background color to the About section */
-  }
-  
-  /* Additional styling for the Project section */
-  .project {
-    background-color: #e6f7ff; /* Add a background color to the Project section */
-  }
+}
+
   
